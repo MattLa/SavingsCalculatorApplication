@@ -50,7 +50,7 @@ public class SavingsCalculatorApplication extends Application {
         interestSlider.setBlockIncrement(.01);
         
         NumberAxis xAxis = new NumberAxis(0, 30, 1);
-        NumberAxis yAxis = new NumberAxis(0, 27500, 2500);
+        NumberAxis yAxis = new NumberAxis(0, 500000, 25000);
         
         LineChart<Number, Number> lineChart = new LineChart<>(xAxis, yAxis);
         lineChart.setTitle("Savings calculator");
@@ -101,7 +101,7 @@ public class SavingsCalculatorApplication extends Application {
         selectionLayout.getChildren().add(monthlySavings);
         selectionLayout.getChildren().add(yearlyInterest);
         
-        Scene view = new Scene(layout, 640, 400);
+        Scene view = new Scene(layout, 640, 700);
         stage.setScene(view);
         stage.show();
     }
