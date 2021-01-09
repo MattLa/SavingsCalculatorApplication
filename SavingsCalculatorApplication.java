@@ -115,9 +115,13 @@ public class SavingsCalculatorApplication extends Application {
             }
             chart.getData().addAll(month, interest);
         } else {
-            month.getData().stream().forEach(data -> {
-                System.out.println(data);
-            });
+            for (int i = 0; i < month.getData().size(); i++) {
+                XYChart.Data temp = (XYChart.Data) month.getData().get(i);
+                temp.setYValue(((savings * 12) * i));
+                
+                XYChart.Data temp2 = (XYChart.Data) interest.getData().get(i);
+                temp2.setYValue(((savings * 12) * i) * Math.pow(1 + (interestRate / 12), 12 * i));
+            }
         }
         
     }
