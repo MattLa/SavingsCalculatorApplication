@@ -47,7 +47,7 @@ public class SavingsCalculatorApplication extends Application {
         interestSlider.setShowTickLabels(true);
         interestSlider.setShowTickMarks(true);
         interestSlider.setMajorTickUnit(5);
-        interestSlider.setBlockIncrement(1);
+        interestSlider.setBlockIncrement(.01);
         
         NumberAxis xAxis = new NumberAxis(0, 30, 1);
         NumberAxis yAxis = new NumberAxis(0, 27500, 2500);
